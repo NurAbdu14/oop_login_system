@@ -77,6 +77,8 @@ class User extends mysqli
             $_SESSION['user']= $user;
             header("location: http://localhost/user/index.php");
         }else{
+            throw new Exception($this->error, 1);
+            
             $_SESSION['error'] = "Wrong Activation COde.";
         }
     }

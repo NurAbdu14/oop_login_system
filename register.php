@@ -1,7 +1,7 @@
 <?php
 include("include/header.php");
 
-if(!isset($_SESSION['user'])){
+if(isset($_SESSION['user'])){
   header("location: http://localhost/user/index.php");
 }
 if(isset($_POST['submit'])){
